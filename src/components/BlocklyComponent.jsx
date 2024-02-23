@@ -9,6 +9,8 @@ import { Variables } from './BlockCategories/Variables';
 import { Events } from './BlockCategories/Events';
 import {Operators} from './BlockCategories/Operators';
 import {Control} from './BlockCategories/Control';
+import {Motion} from './BlockCategories/Motion'
+import {Looks} from './BlockCategories/Looks';
 import initializeBlockly from './InitializeBlockly';
 import { useDispatch } from 'react-redux';
 import { javascriptGenerator } from 'blockly/javascript';
@@ -38,8 +40,9 @@ const BlocklyComponent = () => {
           ${Variables}
           ${Events}
           ${Operators}
+          ${Motion}
          ${Control}
-          
+          ${Looks}
         </xml>
       `;
       const newWorkspace = initializeBlockly(toolboxXml);
